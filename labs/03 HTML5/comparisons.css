@@ -1,0 +1,43 @@
+table, caption {
+    border: solid 1px;
+    margin: auto;
+}
+
+caption {
+    border-bottom-color: grey;
+}
+
+table {
+    border-spacing: 0px;
+    width: 600px;
+}
+
+caption {
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-right: solid 1px grey;
+}
+
+#punanen {
+    background: red;
+    color: white;
+    font-size: larger;
+}
+
+td {
+    padding-left: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+#harmaa {
+    background: lightgrey;
+}

@@ -1,0 +1,13 @@
+body {
+    margin-left: auto;
+    width: 1000px;
+}
+
+p {
+    width: 200px;
+}
+
+img {
+    margin: 100px;
+    float: right;
+}

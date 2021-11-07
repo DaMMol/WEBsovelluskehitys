@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: normal;
+    margin: 10px;
+}
+
+h2 {
+    padding-top: 15px;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    border: 2px solid lightblue;
+    margin: 10px;
+}
+
+#kuvateksti {
+    font-weight: bolder;
+    font-size: small;
+}
+
+.marjat {
+    margin: auto;
+    width: 7em;
+    height: 2.5em;
+    font-size: 40px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.marjatteksti {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#sininen {
+    background: lightblue;
+    margin-top: 50px;
+}
+
+#keltanen {
+    background: lightyellow;
+}
+
+#punanen {
+    background: lightcoral;
+    margin-bottom: 50px;
+}
