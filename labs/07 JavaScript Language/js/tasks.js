@@ -2,7 +2,7 @@
 // This script manages a to-do list.
 
 // Need a global variable:
-var tasks = []; 
+var tasks = [];
 
 // Function called when the form is submitted.
 // Function adds a task to the global array.
@@ -37,6 +37,26 @@ function addTask() {
     return false;
     
 } // End of addTask() function.
+
+function removeDuplicates() {
+    'use strict'
+
+    var output = document.getElementById('output');
+    var message = '';
+
+    tasks = [...new Set(tasks)];
+
+    if(tasks[0] != null) {
+
+        message = '<h2>To-Do</h2><ol>';
+        for (var i = 0, count = tasks.length; i < count; i++) {
+            message += '<li>' + tasks[i] + '</li>';
+        }
+        message += '</ol>';
+        output.innerHTML = message;
+    }
+    return false;
+}
 
 // Initial setup:
 function init() {
