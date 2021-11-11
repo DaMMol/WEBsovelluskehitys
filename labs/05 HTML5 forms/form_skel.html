@@ -6,25 +6,28 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Demonstrating HTML forms</title>
+		<link rel="stylesheet" href="form.css">
 	</head>
 	
 	<body>
 		<h1>Turnitin</h1>
-		<form  lang="fi" action="">
+		<form  lang="fi" action="" id="form">
 			<div>
-				Name: <input type="text" name="studentname"/>
+				Name: <input type="text" name="studentname" placeholder="Etunimi Sukunimi" oninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 			</div>
 			<div>
-				Student id: <input type="text" name="id"  />
+				Student id: <input type="text" name="id" pattern="\d{8}" placeholder="03030302" oninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 			</div>
 			<div>
 				Email:
+				<input type="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="etunimisukunimi@asd.com" oninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 				<!--
 				Make an input named "email"
 				-->
 			</div>
 			<div>
 				Assignment:
+				<input type="text" name="assignment" placeholder="tehtävätnimi" oninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 				<!--
 				Make an input named "assignment"
 				-->
@@ -33,6 +36,7 @@
 
 			<div>
 				Code:
+				<input type="textarea" name="code" placeholder="12345" ninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 				<!--
 				Make an input named "code" which is a text area to put student's code into.
 				-->
@@ -40,18 +44,31 @@
 			</div>
 			<div>
 				Cheat:
+				<input type="checkbox" name="cheat" oninvalid="this.setCustomValidity('Täytä tämä kenttä.')" required/>
 			<!--
 				Make an input named "cheat" which is a check box the student must check.
 			-->
 			</div>
 			<div>
-				Pay:
+				<fieldset>
+					<legend>Pay</legend>
+					<label><input type="radio" name="payment" value="Visa">Visa</label><br>
+					<label><input type="radio" name="payment" value="Paypal">Paypal</label><br>
+					<label><input type="radio" name="payment" value="Mastercard">Mastercard</label><br>
+				</fieldset>
+
 			<!--
 				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
 			-->
 			</div>
 			<div>
 				Score:
+				<select name="score" required>
+					<option value="3">3</option>
+					<option value="2">2</option>
+					<option value="1">1</option>
+					<option value="0">0</option>
+				</select>
 			<!--
 				Make an input named "score" which is a list of choices for the score 
 			-->
