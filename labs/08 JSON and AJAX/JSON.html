@@ -18,8 +18,30 @@ var fido2 = {
 var fidoString = JSON.stringify(fido2);
 console.log("We made a string from a dog! " + fidoString);
 
+window.onload = function() {
+  let matti = {
+    name: {
+      first: "Matti",
+      second: "Meikäläinen"
+    },
+    ika: 38,
+    kunta: "Helsinki"
+  }
+
+  let myString = JSON.stringify(matti);
+  document.getElementById("divi").innerHTML = myString;
+
+  let myObject = JSON.parse(myString);
+  let matinSukunimi = myObject.name.second;
+  matinSukunimi = JSON.stringify(matinSukunimi);
+  document.getElementById("divi2").innerHTML = matinSukunimi;
+}
+
+
   </script>
 </head>
 <body>
+<div id="divi"></div>
+<div id="divi2"></div>
 </body>
 </html>
