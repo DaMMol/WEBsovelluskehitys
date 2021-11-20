@@ -65,5 +65,8 @@ describe('notes module', function () {
             let list = ['first note','second note','third note','fourth note','fifth note'];
             expect(notes.find('NOTE')).toEqual(list);
         });
+        it('it should return false if it doesnt find any matches', function () {
+            expect(notes.find('frist')).toBe(false);
+        });
     });
 });

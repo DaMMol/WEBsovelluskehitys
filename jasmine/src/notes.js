@@ -36,7 +36,7 @@ var notes = (function() {
                     newlist.push(stringlist[i]);
                 }
             }
-            if(newlist != null) {
+            if(newlist.length > 0) {
                 return newlist;
             }
             else {
