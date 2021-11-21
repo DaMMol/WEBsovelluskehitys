@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Tehtava7</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="message">
+    <button v-on:click="lisaaListaan">Lisää</button>
+    <h2>TODO-Lista</h2>
+    <ul>
+        <todo-item
+                v-for="(item, index) in toDO"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+                v-on:remove="toDO.splice(index, 1)"
+        ></todo-item>
+
+    </ul>
+</div>
+<script>
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }} ' +
+            '<button v-on:click="$emit(\'remove\')">Delete User</button></li>'
+    })
+
+    let app = new Vue({
+        el: '#app',
+        data: {
+            toDO: [],
+            message: '',
+            nextid: 0
+        },
+        methods: {
+            lisaaListaan: function() {
+                this.toDO.push({
+                    id: this.nextid++,
+                    text: this.message
+                })
+                this.message = ''
+            }
+        }
+    })
+</script>
+</body>
+</html>

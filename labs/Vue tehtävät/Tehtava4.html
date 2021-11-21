@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Tehtava4</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="message">
+    <button v-on:click="lisaaListaan">Lisää</button>
+    <h2>TODO-Lista</h2>
+    <ul></ul>
+</div>
+<script>
+    let app = new Vue({
+        el: '#app',
+        methods: {
+            lisaaListaan: function() {
+                let listaitemi = document.createElement('li')
+                listaitemi.innerHTML = this.message
+                document.querySelector('ul').appendChild(listaitemi)
+            }
+        }
+    })
+</script>
+</body>
+</html>

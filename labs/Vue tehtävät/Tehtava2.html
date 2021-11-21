@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Tehtava2</title>
+</head>
+<body>
+<div id="app">
+    <span v-if="seen">Now you see me</span>
+    <button v-on:click="Vaihda">Näytä/Piilota</button>
+</div>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            seen: true
+        },
+        methods: {
+            Vaihda: function() {
+                switch (this.seen) {
+                    case true:
+                        this.seen = false
+                        break
+                    case false:
+                        this.seen = true
+                        break
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

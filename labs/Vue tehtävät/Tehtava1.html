@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Tehtava1</title>
+</head>
+<body>
+<div id="app">
+    <p>{{ message }}</p>
+    <input v-model="message" placeholder="Kirjoita jotakin">
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Kirjoita jotakin!'
+        }
+    })
+</script>
+</body>
+</html>
