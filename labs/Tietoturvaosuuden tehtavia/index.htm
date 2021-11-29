@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Tehtävä1</title>
+</head>
+<body>
+<form action="http://127.0.0.1:8081/process_post" method="POST">
+    First Name: <input type="text" pattern="[A-Z]{1,}[a-zA-Z]{1,}" name="first_name"> <br>
+    Last Name: <input type="text" pattern="[A-Z]{1,}[a-zA-Z]{1,}" name="last_name">
+    Age: <input type="number" name="age">
+    E-mail: <input type="email" name="email">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
