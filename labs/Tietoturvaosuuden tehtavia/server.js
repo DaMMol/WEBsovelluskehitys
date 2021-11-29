@@ -11,8 +11,8 @@ app.get('/index.htm', function (req, res) {
 })
 app.post(
     '/process_post', urlencodedParser,
-    check('first_name').isLength({ min: 2 }).withMessage("vähintään viisi merkkiä!"),
-    check('last_name').isLength({ min: 2 }).withMessage("vähintään viisi merkkiä!"),
+    check('first_name').isLength({ min: 2 }).withMessage("vähintään kaksi merkkiä!"),
+    check('last_name').isLength({ min: 2 }).withMessage("vähintään kaksi merkkiä!"),
     check('age').isNumeric().withMessage("vain numeroita"),
     check('email').isEmail().withMessage("pitää olla email-formaatissa!"),
     function (req,res) {
